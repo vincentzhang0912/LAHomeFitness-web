@@ -365,8 +365,8 @@ export default function Home() {
             </div>
             <div className="rounded-2xl border border-[#BFDBFE] bg-white px-5 py-4 text-right">
               <p className="text-xs text-[#64748B]">年费</p>
-              <p className="text-3xl font-black text-[#1E3A8A]">¥1188</p>
-              <p className="text-xs text-[#64748B]">约 ¥99 / 月</p>
+              <p className="text-3xl font-black text-[#1E3A8A]">$1188</p>
+              <p className="text-xs text-[#64748B]">约 $99 / 月</p>
             </div>
           </div>
 
