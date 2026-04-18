@@ -1,10 +1,85 @@
 import Image from "next/image";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "LA居家健身",
+      alternateName: "LAHomeFitness",
+      url: "https://www.lahomefitness.com",
+      logo: "https://www.lahomefitness.com/brand-app-icon.png",
+      description:
+        "面向洛杉矶华人的居家健身 App，每天15分钟科学训练，改善亚健康、提升体能。",
+      sameAs: ["https://apps.apple.com/app/id6759955941"],
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "vincentzys0912@gmail.com",
+        contactType: "customer support",
+        availableLanguage: ["Chinese", "English"],
+      },
+    },
+    {
+      "@type": "MobileApplication",
+      name: "LA居家健身",
+      operatingSystem: "iOS",
+      applicationCategory: "HealthApplication",
+      offers: {
+        "@type": "Offer",
+        price: "19.9",
+        priceCurrency: "USD",
+        description: "HomeFitness Pro 月度订阅",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        ratingCount: "50",
+      },
+      downloadUrl: "https://apps.apple.com/app/id6759955941",
+      description:
+        "每天15分钟居家健身，科学编排热身/正式训练/拉伸，专业动作视频，智能训练计划与数据追踪。",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "LA居家健身每天需要练多久？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "每天只需15分钟，App 会科学编排热身、正式训练和拉伸放松，适合忙碌的上班族和居家人群。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "LA居家健身适合什么人群？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "适合所有想居家锻炼的华人，特别是洛杉矶地区的华人。无论你是新手还是有基础，App 都会根据你的体能水平定制计划。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "15分钟运动真的有效果吗？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "2026年UCL研究证实，15分钟中等强度运动即可显著释放BDNF（大脑的养料），提升专注力与情绪。规律的短时间训练比偶尔的长时间训练更有效。",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   const appStoreUrl = "https://apps.apple.com/app/id6759955941";
 
   return (
     <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section
         className="relative min-h-[92vh] overflow-hidden"
         style={{
