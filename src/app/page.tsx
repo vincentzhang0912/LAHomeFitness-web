@@ -26,14 +26,9 @@ const jsonLd = {
       applicationCategory: "HealthApplication",
       offers: {
         "@type": "Offer",
-        price: "19.9",
+        price: "19.99",
         priceCurrency: "USD",
         description: "HomeFitness Pro 月度订阅",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        ratingCount: "50",
       },
       downloadUrl: "https://apps.apple.com/app/id6759955941",
       description:
@@ -131,7 +126,8 @@ export default function Home() {
             </nav>
           </header>
 
-          <div className="mt-auto pb-16 pt-16 md:pb-20">
+          <div className="mt-auto grid items-end gap-8 pb-16 pt-16 md:grid-cols-[1fr_auto] md:pb-20">
+            <div>
             <h1 className="max-w-3xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
               每天15分钟，
               <br />
@@ -175,35 +171,87 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            </div>
+
+            <div className="hidden md:block">
+              <div className="relative mx-auto w-[220px]">
+                <div className="rounded-[2.5rem] border-[3px] border-white/20 bg-[#0B1020] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+                  <div className="overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#0F766E] to-[#0B1020]">
+                    <div className="px-4 pb-3 pt-10 text-center">
+                      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 backdrop-blur">
+                        <Image
+                          src="/brand-app-icon.png"
+                          alt="App Icon"
+                          width={40}
+                          height={40}
+                          className="rounded-xl"
+                        />
+                      </div>
+                      <p className="text-[11px] font-bold text-white">LA居家健身</p>
+                      <p className="mt-0.5 text-[9px] text-white/60">今日训练计划</p>
+                    </div>
+                    <div className="space-y-2 px-3 pb-4">
+                      <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
+                        <p className="text-[9px] font-semibold text-[#5EEAD4]">热身 · 5 min</p>
+                        <p className="mt-0.5 text-[8px] text-white/50">全身动态拉伸</p>
+                      </div>
+                      <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
+                        <p className="text-[9px] font-semibold text-[#5EEAD4]">正式训练 · 8 min</p>
+                        <p className="mt-0.5 text-[8px] text-white/50">上肢 + 核心力量</p>
+                      </div>
+                      <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
+                        <p className="text-[9px] font-semibold text-[#5EEAD4]">拉伸放松 · 2 min</p>
+                        <p className="mt-0.5 text-[8px] text-white/50">肌肉放松与呼吸</p>
+                      </div>
+                    </div>
+                    <div className="border-t border-white/10 px-3 py-3 text-center">
+                      <p className="text-[10px] font-bold text-white">✅ 已坚持 28 天</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-[#2DD4BF]/25 blur-2xl" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="philosophy" className="mx-auto max-w-6xl px-6 pb-12 pt-14">
-        <div className="rounded-3xl border border-[#D1FAE5] bg-gradient-to-r from-[#ECFEFF] via-white to-[#F0FDFA] p-6 md:p-9 shadow-[0_12px_34px_rgba(13,148,136,0.10)]">
+        <div className="relative overflow-hidden rounded-3xl border border-[#D1FAE5] bg-gradient-to-r from-[#ECFEFF] via-white to-[#F0FDFA] p-6 md:p-9 shadow-[0_12px_34px_rgba(13,148,136,0.10)]">
+          <div className="pointer-events-none absolute -right-14 -top-12 h-36 w-36 rounded-full bg-[#5EEAD4]/35 blur-3xl" />
           <p className="inline-flex rounded-full border border-[#99F6E4] bg-white px-3 py-1 text-xs font-semibold text-[#0F766E]">
-            Our Philosophy
+            About & Philosophy
           </p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight md:text-3xl">
-            我们的理念
+            关于 LA居家健身
           </h2>
           <p className="mt-4 max-w-4xl text-sm leading-8 text-[#334155] md:text-base">
-            我们相信，真正的改变不来自一次“爆发式训练”，而来自可持续的日常系统：
+            LA居家健身是一款以「健康、体型、体能」三位一体为核心的训练 App。
+            我们相信，真正的改变不来自一次“爆发式训练”，而来自可持续的日常系统——
             训练让你变强，恢复让你走得更远，规律让身体和精神一起回到正轨。
-            LA居家健身希望用每天 15 分钟，帮助你把健康、体型、体能真正融入生活。
+            每天 15 分钟，帮助你把健康真正融入生活。
           </p>
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
             {[
               ["Train Smart", "科学训练", "个性化计划 + 清晰节奏，练得有效。"],
               ["Recover Better", "重视恢复", "减少过度消耗，让身体可持续进步。"],
               ["Live Consistently", "长期主义", "把健康做成习惯，而不是短期冲刺。"],
+              ["健康", "", "降低久坐风险，帮助预防亚健康。"],
+              ["体型", "", "提升线条与体态，建立稳定习惯。"],
+              ["体能", "", "增强耐力与力量，改善日常状态。"],
             ].map(([en, zh, desc]) => (
               <div
                 key={en}
                 className="rounded-2xl border border-[#CCFBF1] bg-white/95 p-4 transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(13,148,136,0.12)]"
               >
-                <p className="text-xs font-semibold tracking-wide text-[#0D9488]">{en}</p>
-                <h3 className="mt-1 text-base font-bold text-[#0F172A]">{zh}</h3>
+                {zh ? (
+                  <>
+                    <p className="text-xs font-semibold tracking-wide text-[#0D9488]">{en}</p>
+                    <h3 className="mt-1 text-base font-bold text-[#0F172A]">{zh}</h3>
+                  </>
+                ) : (
+                  <h3 className="text-base font-bold text-[#0F766E]">{en}</h3>
+                )}
                 <p className="mt-1 text-sm leading-6 text-[#475569]">{desc}</p>
               </div>
             ))}
@@ -317,34 +365,68 @@ export default function Home() {
         </div>
       </section>
 
+
       <section className="mx-auto max-w-6xl px-6 pb-12">
-        <div className="relative overflow-hidden rounded-3xl border border-[#99F6E4] bg-gradient-to-r from-[#ECFEFF] to-white p-6 md:p-8 shadow-[0_12px_34px_rgba(13,148,136,0.13)]">
-          <div className="pointer-events-none absolute -right-14 -top-12 h-36 w-36 rounded-full bg-[#5EEAD4]/35 blur-3xl" />
-          <p className="inline-flex rounded-full border border-[#99F6E4] bg-white px-3 py-1 text-xs font-semibold text-[#0F766E]">
-            Brand Mission
+        <div className="rounded-3xl border border-[#0D9488]/20 bg-[#0B1020] p-6 md:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.25)]">
+          <p className="inline-flex rounded-full border border-[#2DD4BF]/30 bg-[#2DD4BF]/10 px-3 py-1 text-xs font-semibold text-[#5EEAD4]">
+            Best Investment
           </p>
-          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-            关于我们
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-white md:text-3xl">
+            每月 $19.99，可能是你最值的一笔消费
           </h2>
-          <p className="mt-4 max-w-3xl text-sm leading-8 text-[#334155] md:text-base">
-            LA居家健身是一款以「健康、体型、体能」三位一体为核心的训练 App，
-            致力于用更科学、更可坚持的方式，帮助华人用户改善身体素质。
-            我们相信真正有效的训练，不是短期冲刺，而是每天 15 分钟的长期积累。
+          <p className="mt-2 text-sm text-[#94A3B8]">
+            一杯咖啡的钱，换一整月的改变
           </p>
-          <div className="mt-5 grid gap-3 md:grid-cols-3">
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ["健康", "降低久坐风险，帮助预防亚健康"],
-              ["体型", "提升线条与体态，建立稳定习惯"],
-              ["体能", "增强耐力与力量，改善日常状态"],
-            ].map(([title, desc]) => (
+              ["🧠", "大脑升级", "激活多巴胺与 BDNF，更专注、更快乐、更高效"],
+              ["📋", "科学训练计划", "每日自动生成，省去私教 $200+/月"],
+              ["🎬", "100+ 专业动作视频", "中文讲解 + 肌肉示意，零基础也能做对"],
+              ["😴", "睡眠与健康改善", "规律运动预防亚健康，少生病 = 少花钱"],
+              ["👔", "体型改善", "穿衣更好看，自信是最好的投资"],
+              ["⏱️", "省下 15 小时/月", "不用通勤，起床到练完只要 15 分钟"],
+              ["📊", "数据追踪 + 成就系统", "看得见的坚持，戒不掉的习惯"],
+              ["🔄", "灵活随时练", "起床/午休/下班/睡前，任何时间都是你的健身房"],
+            ].map(([emoji, title, desc]) => (
               <div
                 key={title}
-                className="rounded-2xl border border-[#CCFBF1] bg-white/95 p-4 transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(13,148,136,0.12)]"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-[#2DD4BF]/30 hover:bg-white/[0.07]"
               >
-                <h3 className="text-base font-bold text-[#0F766E]">{title}</h3>
-                <p className="mt-1 text-sm text-[#475569]">{desc}</p>
+                <span className="text-2xl">{emoji}</span>
+                <h3 className="mt-2 text-sm font-bold text-white">{title}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-[#94A3B8]">{desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-[#2DD4BF]/20 bg-[#2DD4BF]/[0.06] px-6 py-6 text-center">
+            <p className="text-xs font-semibold text-[#5EEAD4]">HomeFitness Pro</p>
+            <p className="mt-2 text-2xl font-black text-white">
+              $19.99<span className="text-sm font-normal text-[#94A3B8]"> /月</span>
+            </p>
+            <p className="mt-1 text-sm text-[#5EEAD4]">
+              别人花 $19.99 买了一顿饭，你买了一个更好的自己
+            </p>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://apps.apple.com/app/id6759955941"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#0F766E] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-[#0F766E]/30 transition hover:brightness-110"
+              >
+                下载并开始体验
+              </a>
+              <a
+                className="inline-flex items-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/80 transition hover:border-white/40"
+                href="/terms"
+              >
+                查看使用条款
+              </a>
+            </div>
+            <p className="mt-4 text-xs leading-relaxed text-[#64748B]">
+              自动续订月度订阅 · 首次订阅可享 7 天免费试用（如适用） · 可在 iOS 设置中随时管理与取消
+            </p>
           </div>
         </div>
       </section>
@@ -388,36 +470,30 @@ export default function Home() {
             ))}
           </div>
 
+          <div className="mt-6 flex flex-col items-center gap-4 rounded-2xl border border-[#BFDBFE] bg-white p-6 sm:flex-row sm:items-start sm:gap-6">
+            <div className="shrink-0">
+              <Image
+                src="/wechat-qr.png"
+                alt="微信二维码 - 添加 Vincent"
+                width={140}
+                height={140}
+                className="rounded-xl"
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-base font-bold text-[#0F172A]">添加微信，了解 Elite 私教详情</p>
+              <p className="mt-1 text-sm text-[#475569]">
+                扫码添加教练 Vincent 微信，获取一对一咨询、体验线下服务或了解更多会员权益。
+              </p>
+              <p className="mt-2 text-xs text-[#94A3B8]">
+                微信号：zyslovesky · 坐标洛杉矶
+              </p>
+            </div>
+          </div>
+
           <p className="mt-5 text-xs leading-6 text-[#64748B]">
             说明：线下服务地区为大洛杉矶地区，预约规则与服务细则以上线公告为准。
           </p>
-        </div>
-      </section>
-
-      <section id="pro" className="mx-auto max-w-6xl px-6 pb-14">
-        <div className="rounded-3xl bg-[#0F172A] p-7 text-white md:p-10">
-          <p className="text-sm font-semibold text-teal-300">HomeFitness Pro</p>
-          <h2 className="mt-2 text-3xl font-black tracking-tight">标准会员：解锁完整训练系统</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
-            自动续订月度订阅，价格为 $19.99/月（或当地等价货币）。
-            首次订阅可享 7 天免费试用（如适用），可在 iOS 设置中随时管理与取消。
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              className="rounded-xl bg-[#0D9488] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#0F766E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5EEAD4]"
-              href={appStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              下载并开始体验
-            </a>
-            <a
-              className="rounded-xl border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5EEAD4]"
-              href="/terms"
-            >
-              查看使用条款
-            </a>
-          </div>
         </div>
       </section>
 
@@ -511,6 +587,8 @@ export default function Home() {
               {" "}
               vincentzys0912@gmail.com
             </a>
+            <span className="mx-2" aria-hidden="true">·</span>
+            微信：zyslovesky（扫码添加见 Elite 私教板块）
           </p>
         </div>
       </footer>
