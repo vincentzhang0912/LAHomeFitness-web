@@ -372,10 +372,10 @@ export default function Home() {
             Best Investment
           </p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight text-white md:text-3xl">
-            每月 $19.99，可能是你最值的一笔消费
+            选择适合你的计划
           </h2>
           <p className="mt-2 text-sm text-[#94A3B8]">
-            一杯咖啡的钱，换一整月的改变
+            一杯咖啡的钱，换一整月的改变 · 年付更省
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -400,12 +400,40 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-[#2DD4BF]/20 bg-[#2DD4BF]/[0.06] px-6 py-6 text-center">
-            <p className="text-xs font-semibold text-[#5EEAD4]">HomeFitness Pro</p>
-            <p className="mt-2 text-2xl font-black text-white">
-              $19.99<span className="text-sm font-normal text-[#94A3B8]"> /月</span>
-            </p>
-            <p className="mt-1 text-sm text-[#5EEAD4]">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-6 text-center">
+              <p className="text-xs font-semibold tracking-wide text-[#94A3B8]">月度会员</p>
+              <p className="mt-3 text-3xl font-black text-white">
+                $19.99<span className="text-sm font-normal text-[#94A3B8]"> /月</span>
+              </p>
+              <p className="mt-2 text-xs text-[#94A3B8]">按月订阅，灵活自由</p>
+              <ul className="mt-4 space-y-2 text-left text-xs text-[#94A3B8]">
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>全部训练功能</li>
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>7 天免费试用</li>
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>随时取消</li>
+              </ul>
+            </div>
+
+            <div className="relative rounded-2xl border-2 border-[#2DD4BF]/40 bg-[#2DD4BF]/[0.06] p-6 text-center">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#F59E0B] px-3 py-1 text-[10px] font-bold text-white shadow-lg">
+                推荐 · 省 33%
+              </div>
+              <p className="text-xs font-semibold tracking-wide text-[#5EEAD4]">年度会员</p>
+              <p className="mt-3 text-3xl font-black text-white">
+                $159.99<span className="text-sm font-normal text-[#94A3B8]"> /年</span>
+              </p>
+              <p className="mt-2 text-xs text-[#5EEAD4]">约 $13.33/月，年省近 $80</p>
+              <ul className="mt-4 space-y-2 text-left text-xs text-[#94A3B8]">
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>全部训练功能</li>
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>7 天免费试用</li>
+                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>随时取消</li>
+                <li className="flex items-start gap-2"><span className="text-[#F59E0B]">★</span>相比月付省 33%</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm font-medium text-[#5EEAD4]">
               别人花 $19.99 买了一顿饭，你买了一个更好的自己
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
@@ -425,7 +453,7 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-4 text-xs leading-relaxed text-[#64748B]">
-              自动续订月度订阅 · 首次订阅可享 7 天免费试用（如适用） · 可在 iOS 设置中随时管理与取消
+              自动续订订阅 · 首次订阅可享 7 天免费试用（如适用） · 可在 iOS 设置中随时管理与取消
             </p>
           </div>
         </div>
