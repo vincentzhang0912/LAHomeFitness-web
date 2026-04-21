@@ -416,18 +416,18 @@ export default function Home() {
 
             <div className="relative rounded-2xl border-2 border-[#2DD4BF]/40 bg-[#2DD4BF]/[0.06] p-6 text-center">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#F59E0B] px-3 py-1 text-[10px] font-bold text-white shadow-lg">
-                推荐 · 省 33%
+                推荐 · 省 17%
               </div>
               <p className="text-xs font-semibold tracking-wide text-[#5EEAD4]">年度会员</p>
               <p className="mt-3 text-3xl font-black text-white">
-                $159.99<span className="text-sm font-normal text-[#94A3B8]"> /年</span>
+                $199.99<span className="text-sm font-normal text-[#94A3B8]"> /年</span>
               </p>
-              <p className="mt-2 text-xs text-[#5EEAD4]">约 $13.33/月，年省近 $80</p>
+              <p className="mt-2 text-xs text-[#5EEAD4]">约 $16.67/月，年省近 $40</p>
               <ul className="mt-4 space-y-2 text-left text-xs text-[#94A3B8]">
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>全部训练功能</li>
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>7 天免费试用</li>
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>随时取消</li>
-                <li className="flex items-start gap-2"><span className="text-[#F59E0B]">★</span>相比月付省 33%</li>
+                <li className="flex items-start gap-2"><span className="text-[#F59E0B]">★</span>相比月付省 17%</li>
               </ul>
             </div>
           </div>
