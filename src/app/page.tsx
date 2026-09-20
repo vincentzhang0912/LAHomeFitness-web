@@ -475,14 +475,17 @@ export default function Home() {
             </div>
             <div className="rounded-2xl border border-[#BFDBFE] bg-white px-5 py-4 text-right">
               <p className="text-xs text-[#64748B]">年费</p>
-              <p className="text-3xl font-black text-[#1E3A8A]">$1188</p>
-              <p className="text-xs text-[#64748B]">约 $99 / 月</p>
+              <p className="text-3xl font-black text-[#1E3A8A]">$3,980</p>
+              <div className="mt-3 border-t border-[#DBEAFE] pt-3">
+                <p className="text-xs text-[#64748B]">指定健身房年费</p>
+                <p className="mt-1 text-2xl font-bold text-[#1E3A8A]">$2,980</p>
+              </div>
             </div>
           </div>
 
           <div className="mt-6 grid gap-3 md:grid-cols-2">
             {[
-              ["每月 1 节线下私教服务", "线下当面指导，动作质量更稳定。"],
+              ["每周 1 节线下私教课", "可选择健身课或游泳课，享受一对一当面指导。"],
               ["动作纠正", "针对关键动作进行纠错，降低受伤风险。"],
               ["1v1 线上动作评估", "远程评估动作质量，及时给出调整建议。"],
               ["饮食指导", "结合目标给出可执行的日常饮食建议。"],
@@ -520,7 +523,7 @@ export default function Home() {
           </div>
 
           <p className="mt-5 text-xs leading-6 text-[#64748B]">
-            说明：线下服务地区为大洛杉矶地区，预约规则与服务细则以上线公告为准。
+            说明：线下服务地区为大洛杉矶地区。如遇突发紧急事件或特殊情况，教练可能需临时请假，届时将尽早通知会员。由此暂停的课程不另行提供补课。预约规则与服务细则以上线公告为准。
           </p>
         </div>
       </section>
