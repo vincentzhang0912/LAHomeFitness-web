@@ -17,7 +17,6 @@ export default async function TermsPage() {
           <ul className="list-disc space-y-2 pl-5 text-slate-600">
             <li>{t("订阅名称：HomeFitness Pro（自动续订月度订阅）")}</li>
             <li>{t("订阅价格：$19.99/月（或当地等价货币）")}</li>
-            <li>{t("首次订阅可享 7 天免费试用（如适用）")}</li>
             <li>{t("付款将通过 Apple ID 账户扣款")}</li>
             <li>{t("可在 iOS 设置 &gt; Apple ID &gt; 订阅 中管理或取消")}</li>
           </ul>
