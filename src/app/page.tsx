@@ -383,7 +383,6 @@ const jsonLd = {
               <p className="mt-2 text-xs text-[#94A3B8]">{t("按月订阅，灵活自由")}</p>
               <ul className="mt-4 space-y-2 text-left text-xs text-[#94A3B8]">
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("全部训练功能")}</li>
-                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("7 天免费试用")}</li>
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("随时取消")}</li>
               </ul>
             </div>
@@ -397,7 +396,6 @@ const jsonLd = {
               <p className="mt-2 text-xs text-[#5EEAD4]">{t("约 $16.67/月，年省近 $40")}</p>
               <ul className="mt-4 space-y-2 text-left text-xs text-[#94A3B8]">
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("全部训练功能")}</li>
-                <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("7 天免费试用")}</li>
                 <li className="flex items-start gap-2"><span className="text-[#5EEAD4]">✓</span>{t("随时取消")}</li>
                 <li className="flex items-start gap-2"><span className="text-[#F59E0B]">★</span>{t("相比月付省 17%")}</li>
               </ul>
@@ -418,7 +416,7 @@ const jsonLd = {
                 href="/terms"
               >{t("查看使用条款")}</a>
             </div>
-            <p className="mt-4 text-xs leading-relaxed text-[#64748B]">{t("自动续订订阅 · 首次订阅可享 7 天免费试用（如适用） · 可在 iOS 设置中随时管理与取消")}</p>
+            <p className="mt-4 text-xs leading-relaxed text-[#64748B]">{t("自动续订订阅 · 可在 iOS 设置中随时管理与取消")}</p>
           </div>
         </div>
       </section>
