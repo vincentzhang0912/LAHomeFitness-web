@@ -118,12 +118,15 @@ const jsonLd = {
                   <span className="block text-[11px] text-teal-100/90">LAHomeFitness</span>
                 </div>
               </div>
-              <a
-                href={appStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-[#0D9488] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0F766E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5EEAD4]"
-              >{t("获取 App")}</a>
+              <div className="flex items-center gap-2">
+                <a href="#contact" className="rounded-full border border-white/40 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5EEAD4]">Contact Me ↓</a>
+                <a
+                  href={appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-[#0D9488] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0F766E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5EEAD4]"
+                >{t("获取 App")}</a>
+              </div>
             </nav>
           </header>
 
@@ -543,7 +546,7 @@ const jsonLd = {
         </div>
       </section>
 
-      <footer className="border-t border-[#E2E8F0] bg-white">
+      <footer id="contact" className="scroll-mt-6 border-t border-[#E2E8F0] bg-white">
         <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-[#64748B]">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p>© {new Date().getFullYear()}{t("LA居家健身")}</p>
@@ -553,11 +556,14 @@ const jsonLd = {
               <a className="text-[#0F766E] hover:underline" href="/terms">{t("使用条款")}</a>
             </div>
           </div>
-          <p className="mt-2">{t("商务与支持：")}<a className="text-[#0F766E] hover:underline" href="mailto:vincentzys0912@gmail.com">
-              {" "}
-              vincentzys0912@gmail.com
-            </a>
-            <span className="mx-2" aria-hidden="true">·</span>{t("微信：zyslovesky（扫码添加见 Elite 私教板块）")}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="font-semibold text-[#334155]">Contact Me</span>
+            <a className="text-[#0F766E] hover:underline" href="tel:+16266063363">+1 (626) 606-3363</a>
+            <span aria-hidden="true">·</span>
+            <a className="break-all text-[#0F766E] hover:underline" href="mailto:Vincentzys0912@gmail.com">Vincentzys0912@gmail.com</a>
+            <span aria-hidden="true">·</span>
+            <span>{t("微信：zyslovesky（扫码添加见 Elite 私教板块）")}</span>
+          </div>
         </div>
       </footer>
     </main>
