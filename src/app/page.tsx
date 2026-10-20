@@ -1,3 +1,4 @@
+import { TrainingOverview } from "@/components/TrainingOverview";
 import { getTranslator } from "@/i18n/server";
 import Image from "next/image";
 
@@ -203,6 +204,8 @@ const jsonLd = {
           </div>
         </div>
       </section>
+
+      <TrainingOverview t={t} />
 
       <section id="philosophy" className="mx-auto max-w-6xl px-6 pb-12 pt-14">
         <div className="relative overflow-hidden rounded-3xl border border-[#D1FAE5] bg-gradient-to-r from-[#ECFEFF] via-white to-[#F0FDFA] p-6 md:p-9 shadow-[0_12px_34px_rgba(13,148,136,0.10)]">
