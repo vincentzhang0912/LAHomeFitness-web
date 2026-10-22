@@ -31,7 +31,7 @@ export default function ConfirmEmailClient() {
   }, []);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#F8FAFC] px-5 py-12 text-[#0F172A]">
+    <main id="main-content" className="flex min-h-screen items-center justify-center bg-[#F8FAFC] px-5 py-12 text-[#0F172A]">
       <section className="w-full max-w-[440px] rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         <div className="mb-6 text-center">
           <p className="text-sm font-bold text-[#0F766E]">{t("LA居家健身")}</p>

@@ -17,7 +17,7 @@ export function TrainingOverview({ t }: Props) {
     <section id="training" aria-labelledby="training-heading" className="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <div className="max-w-3xl">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">{t('多种训练，一套日常计划')}</p>
-        <h2 id="training-heading" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">{t('练力量，也练心肺。全身主要肌群，都有安排。')}</h2>
+        <h1 id="training-heading" className="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">{t('练力量，也练心肺。全身主要肌群，都有安排。')}</h1>
         <p className="mt-5 text-base leading-8 text-slate-600">{t('LA Home Fitness 将力量、有氧、混合循环与拉伸活动组合到一周计划中，兼顾上肢、核心与下肢。无需在不同 App 之间拼凑日常训练。')}</p>
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-2">

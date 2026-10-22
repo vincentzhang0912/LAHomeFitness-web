@@ -1,5 +1,6 @@
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { getLanguage, getTranslator } from "@/i18n/server";
-import { LanguageProvider, LanguageSwitcher } from "@/i18n/LanguageProvider";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -87,13 +88,14 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const language = await getLanguage();
+  const t = await getTranslator();
   return (
     <html
       lang={language === 'en' ? 'en' : 'zh-CN'}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <LanguageProvider language={language}>{children}<LanguageSwitcher /></LanguageProvider>
+        <LanguageProvider language={language}><SiteHeader t={t} />{children}<SiteFooter t={t} /></LanguageProvider>
       </body>
     </html>
   );

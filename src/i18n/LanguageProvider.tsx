@@ -25,11 +25,11 @@ export function LanguageSwitcher() {
     // Refresh server content without remounting forms or consuming auth links twice.
     startTransition(() => router.refresh());
   }
-  return <nav aria-label="Language / 语言" className="fixed bottom-5 right-5 z-50 flex rounded-full border border-slate-300 bg-white p-1 shadow-lg">
+  return <div role="group" aria-label="Language / 语言" className="flex shrink-0 rounded-full border border-slate-200 bg-white p-0.5">
     {(['en', 'zh'] as const).map(option => <button key={option} type="button" lang={option === 'en' ? 'en' : 'zh-CN'}
       disabled={pending} aria-pressed={language === option} onClick={() => select(option)}
-      className={`min-h-11 rounded-full px-4 py-2 text-sm font-semibold ${language === option ? 'bg-teal-700 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>
+      className={`min-h-11 rounded-full px-3 py-2 text-xs font-semibold ${language === option ? 'bg-teal-700 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>
       {option === 'en' ? 'English' : '中文'}
     </button>)}
-  </nav>;
+  </div>;
 }

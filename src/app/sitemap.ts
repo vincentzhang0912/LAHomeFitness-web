@@ -1,27 +1,8 @@
-import type { MetadataRoute } from "next";
-
+import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.lahomefitness.com";
-  const now = new Date().toISOString();
-
-  return [
-    {
-      url: base,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${base}/privacy`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
-    {
-      url: `${base}/terms`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
-  ];
+  const base = 'https://www.lahomefitness.com';
+  const lastModified = new Date();
+  return ['', '/training', '/pricing', '/coaching', '/contact', '/privacy', '/terms'].map(path => ({
+    url: `${base}${path}`, lastModified, changeFrequency: path === '' ? 'weekly' : 'monthly', priority: path === '' ? 1 : ['/privacy','/terms'].includes(path) ? 0.3 : 0.8,
+  }));
 }

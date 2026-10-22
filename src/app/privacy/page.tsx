@@ -1,8 +1,10 @@
+export function generateMetadata() { return pageMetadata("隐私政策","了解 LA Home Fitness 的隐私政策。","/privacy"); }
+import { pageMetadata } from "@/lib/pageMetadata";
 import { getTranslator } from "@/i18n/server";
 export default async function PrivacyPage() {
  const t = await getTranslator();
   return (
-    <main className="min-h-screen bg-slate-50 px-6 py-14 text-slate-800">
+    <main id="main-content" className="min-h-screen bg-slate-50 px-6 py-14 text-slate-800">
       <article className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h1 className="text-3xl font-bold">{t("隐私政策 / Privacy Policy")}</h1>
         <p className="mt-2 text-sm text-slate-500">{t("最后更新：2026 年 4 月")}</p>
